@@ -1,0 +1,10 @@
+ssh-keyscan -H 192.168.1.10 >> /root/.ssh/known_hosts
+ssh-keyscan -H 192.168.1.11 >> /root/.ssh/known_hosts
+ssh-keyscan -H 192.168.1.12 >> /root/.ssh/known_hosts
+ssh-keyscan -H 192.168.1.13 >> /root/.ssh/known_hosts
+ssh-keyscan -H 192.168.1.14 >> /root/.ssh/known_hosts
+ssh-keyscan -H master >> /root/.ssh/known_hosts
+ssh-keyscan -H backup >> /root/.ssh/known_hosts
+ssh-keyscan -H hadoop1 >> /root/.ssh/known_hosts
+ssh-keyscan -H hadoop2 >> /root/.ssh/known_hosts
+ssh-keyscan -H hadoop3 >> /root/.ssh/known_hosts

@@ -20,6 +20,13 @@ file { "/root/.ssh":
     mode => 770
 }
 
+file { "/script":
+    ensure => "directory",
+    owner => root,
+    group => root,
+    mode => 777
+}
+
 file { "/root/.ssh/id_rsa":
     source => "puppet:///modules/hadoop/id_rsa",
     mode => 600,
@@ -42,6 +49,20 @@ ssh_authorized_key { "ssh_key":
     type   => "ssh-rsa",
     user   => "root",
     require => File['/root/.ssh/id_rsa.pub']
+}
+
+file { "/etc/hosts":
+    source => "puppet:///modules/hadoop/hosts",
+    mode => 644,
+    owner => root,
+    group => root
+}
+
+file { "/script/known_hosts.sh":
+    source => "puppet:///modules/hadoop/known_hosts.sh",
+    mode => 777,
+    owner => root,
+    group => root
 }
 
 include hadoop

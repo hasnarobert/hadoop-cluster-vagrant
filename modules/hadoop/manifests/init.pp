@@ -55,4 +55,12 @@ class hadoop {
         require => Exec["unpack_hadoop"]
     }
 
+    file { "${hadoop_home}-1.2.1/conf/hadoop-env.sh":
+        source => "puppet:///modules/hadoop/hadoop-env.sh",
+        mode => 644,
+        owner => root,
+        group => root,
+        require => Exec["unpack_hadoop"]
+    }
+
 }
