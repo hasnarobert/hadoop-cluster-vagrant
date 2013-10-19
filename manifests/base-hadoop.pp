@@ -13,3 +13,4 @@ package { "openjdk-6-jdk":
     require => Exec['apt-update'],
 }
 
+include hadoop
