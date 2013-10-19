@@ -1,12 +1,15 @@
 group { "puppet":
-    ensure => "present",
+    ensure => "present"
 }
 
-exec { 'apt-get update':
-    command => 'apt-get update',
+exec { "apt-update":
+    command => "/usr/bin/apt-get update"
 }
+
+Exec["apt-update"] -> Package <| |>
 
 package { "openjdk-6-jdk":
-    ensure => present
-    require => Exec['apt-get update']
+    ensure => present,
+    require => Exec['apt-update'],
 }
+
