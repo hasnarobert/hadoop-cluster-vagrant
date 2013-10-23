@@ -26,7 +26,7 @@ Prerequisites:
 git clone git@github.com:hasnarobert/hadoop-cluster-vagrant.git
 cd hadoop-cluster-vagrant
 vagrant up # It will take a while
-./finish-setup.sh
+./finish-setup-unix.sh
 ```
 This will start the hadoop cluster. You can see the status page at: http://192.168.1.10:50070/dfshealth.jsp
 
