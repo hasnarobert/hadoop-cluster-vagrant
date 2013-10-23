@@ -13,6 +13,11 @@ package { "openjdk-6-jdk":
     require => Exec['apt-update'],
 }
 
+package { "vim":
+    ensure => present,
+    require => Exec['apt-update'],
+}
+
 file { "/root/.ssh":
     ensure => "directory",
     owner => root,
