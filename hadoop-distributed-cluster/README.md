@@ -23,8 +23,6 @@ Prerequisites:
 
 
 ```
-git clone git@github.com:hasnarobert/hadoop-cluster-vagrant.git
-cd hadoop-cluster-vagrant
 vagrant up # It will take a while
 ./finish-setup-unix.sh
 ```
