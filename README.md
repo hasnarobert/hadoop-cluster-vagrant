@@ -6,4 +6,5 @@ This repository contains tools for setting up a hadoop learning environment. It 
 
 ## Contents
 ### hadoop-distributed-cluster
-### hbase-local-filesystem
+### hadoop-single-node
+### oozie-single-node
